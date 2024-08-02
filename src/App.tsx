@@ -11,9 +11,9 @@ function App() {
     </GridItem>
     <Show above="lg">
       {/* to hide the aside at smaller screens */}
-      <GridItem area='aside' bg='gold' >Aside</GridItem>
+      <GridItem area='aside'>Aside</GridItem>
     </Show>
-    <GridItem area='main' bg='dodgerblue' >Main</GridItem>
+    <GridItem area='main'>Main</GridItem>
 
   </Grid>
 }
