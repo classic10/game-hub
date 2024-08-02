@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
 import apiClient from "../services/api-client";
 
-interface Game {
+export interface Game {
     id: number,
-    name: string
+    name: string,
+    background_image: string
 }
+
 interface FetchGamesResponse {
     count: number,
     results: Game[]
 };
-
 
 const useGames = () => {
     const [games, setGames] = useState<Game[]>([]);
