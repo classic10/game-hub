@@ -4,30 +4,32 @@ import GameGrid from './Components/GameGrid';
 import GenresList from './Components/GenresList';
 
 function App() {
-  return <Grid
-    templateAreas={{
-      base: `"nav main"`, // For defining mobile devices screen layout
-      lg: `"nav nav" "aside main"` // For defining larger screen layout, We want aside panel to see on the larger devices with resolution 1024 px
-    }}
-    templateColumns={{
-      base: '1fr',
-      lg: '200px 1fr'
-    }}
+  return (
+    <Grid
+      templateAreas={{
+        base: `"nav main"`, // For defining mobile devices screen layout
+        lg: `"nav nav" "aside main"` // For defining larger screen layout, We want aside panel to see on the larger devices with resolution 1024 px
+      }}
+      templateColumns={{
+        base: '1fr',
+        lg: '200px 1fr'
+      }}
 
-  >
+    >
 
-    <GridItem area='nav'>
-      <NavBar></NavBar>
-    </GridItem>
-    <Show above="lg">
-      {/* to hide the aside at smaller screens */}
-      <GridItem area='aside' paddingX={5}><GenresList></GenresList></GridItem>
-    </Show>
-    <GridItem area='main'>
-      <GameGrid></GameGrid>
-    </GridItem>
+      <GridItem area='nav'>
+        <NavBar></NavBar>
+      </GridItem>
+      <Show above="lg">
+        {/* to hide the aside at smaller screens */}
+        <GridItem area='aside' paddingX={5}><GenresList></GenresList></GridItem>
+      </Show>
+      <GridItem area='main'>
+        <GameGrid></GameGrid>
+      </GridItem>
 
-  </Grid>
+    </Grid>
+  )
 }
 
 export default App
