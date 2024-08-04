@@ -26,7 +26,6 @@ const PlatformIconsList = ({ platforms }: Props) => {
         <>
             {/*platforms.map(platform => <Text>{platform.name} </Text>)*/}
             <HStack marginY={1}> {/* Theme spacing in chakra by default is 4 we are making this 1 */}
-                <Icon as={iconMap[platforms.slug]}></Icon>
                 {platforms.map(platform => <Icon as={iconMap[platform.slug]} color='gray.500'> </Icon>)}
             </HStack>
         </>
